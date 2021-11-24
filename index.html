@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      function ChangeText()
+      {
+      document.getElementById("p1").innerHTML="and a happy new year";
+      }
+      function bye() {
+      var id;
+      id=window.open("","example","width=600, height=350");
+      id.focus();
+      id.document.open();
+      id.document.write("<h1><form><textarea rows='10' cols='45' name='text'></textarea></form></h1>");
+      id.document.write("<input type='button' value='Закрыть окно' onclick='window.close();'> </form>");
+      id.document.close();
+      }
+    </script>
+  </head>
+  <body>
+    <form name="2">
+        <input type="button" value="Нажмите"
+        onclick="window.alert('С вас миллион долларов.'); "><br /><br />
+    </form>
+    <br>
+      <a href="javascript:window.alert('Гугл лучше всех ха-ха')" >Нажмите на ссылку, чтобы перейти в Яндекс</a>
+        <h1>текст, написанный с помощью метода concat():</h1>
+      <script>
+          var hell = 'Привет, ';
+          var phare = hell.concat('человек', ', удачного дня.');
+  document.write(phare);
+      </script>
+      <div class="center">
+          <p id="p1" class="text2">We wish you a merry Christmas</p>
+          <input type="button" onclick="ChangeText()" value="Изменить текст" />
+      </div>
+      <form>
+         <h2>Хотите сказать пару слов?</h2>
+         <input type="submit" onclick="bye();" value="Да!">
+      </form>
+  </body>
+</html>
